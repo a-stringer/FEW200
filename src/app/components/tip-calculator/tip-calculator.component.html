@@ -1,0 +1,21 @@
+<section>
+  <div class="btn-group"
+    role="group"
+    aria-label="Basic example">
+    <button class="btn btn-secondary"
+      (click)="setTip(.10)">10%</button>
+    <button class="btn btn-secondary"
+      (click)="setTip(.15)">15%</button>
+    <button class="btn btn-secondary"
+      (click)="setTip(.20)">20%</button>
+  </div>
+  <p>You have selected a {{tipPercent | percent}} tip.</p>
+  <label for="">
+    Add the total
+    <input #blessed
+      (change)="total(blessed)"
+      type="text">
+  </label>
+  <p>Add {{totalAmount * tipPercent | currency}} for a total of {{totalAmount + (totalAmount * tipPercent) | currency}}
+  </p>
+</section>
