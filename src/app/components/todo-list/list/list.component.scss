@@ -1,0 +1,13 @@
+li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+span {
+  color: darkblue;
+  &.completed {
+    text-decoration: line-through;
+    color: darkgreen;
+  }
+
+}

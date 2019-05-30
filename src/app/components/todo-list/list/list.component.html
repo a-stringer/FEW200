@@ -1,0 +1,16 @@
+<ul class="list-unstyled col-6">
+  <li class="alert"
+    [ngClass]="{'alert-info': !item.completed, 'alert-success': item.completed}"
+    *ngFor="let item of list">
+    <span [ngClass]="{'completed': item.completed}">{{item.description}}</span>
+    <input type="button"
+      (click)="markComplete(item)"
+      value="X"
+      class="btn btn-sm btn-danger btn-complete"
+      *ngIf="!item.completed">
+  </li>
+</ul>
+<div class="col-6">
+  <button class="btn btn-warning"
+    (click)="removeCompleted()">Remove completed Items</button>
+</div>

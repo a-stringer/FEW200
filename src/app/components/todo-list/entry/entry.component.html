@@ -1,0 +1,14 @@
+<div class="form-group col-6">
+  <label for="item">Item</label>
+  <div class="input-group">
+    <input name="item"
+      #newItem
+      type="text"
+      class="form-control">
+    <label class="input-group-append">
+      <button type="button"
+        (click)="add(newItem)"
+        class="btn btn-success">Add Item</button>
+    </label>
+  </div>
+</div>

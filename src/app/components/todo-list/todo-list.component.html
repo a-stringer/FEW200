@@ -1,27 +1,6 @@
-<div class="formgroup">
-  <label for="item">item</label>
-  <input name="item"
-    #newItem
-    type="text"
-    class="form-control">
-  <input type="button"
-    (click)="add(newItem)"
-    class="btn btn-success"
-    value="add_Item">
-</div>
+<app-entry (itemAdded)="add($event)"></app-entry>
 <section>
-  <ul class="list-unstyled">
-    <li class="alert"
-      [ngClass]="{'alert-info': !item.completed, 'alert-success': item.completed}"
-      *ngFor="let item of items">
-      <span [ngClass]="{'completed': item.completed}">{{item.description}}</span>
-      <input type="button"
-        (click)="markComplete(item)"
-        value="X"
-        class="btn btn-sm btn-danger float-right"
-        *ngIf="!item.completed">
-    </li>
-  </ul>
-  <button class="btn btn-warning"
-    (click)="removeCompleted()">Remove completed Items</button>
+  <app-list [list]="items"
+    (removedItems)="removeCompleted()"
+    (markedComplete)="markComplete($event)"></app-list>
 </section>
