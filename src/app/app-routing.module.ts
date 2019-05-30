@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ToDoListComponent } from './components/todo-list/todo-list.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TipCalculatorComponent } from './components/tip-calculator/tip-calculator.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'todo-list',
-    component: ToDoListComponent
+    component: TodoListComponent
   },
   {
     path: 'tip-calculator',
