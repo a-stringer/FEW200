@@ -16,6 +16,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { reducers } from './reducers';
+import { EffectsModule } from '@ngrx/effects';
+import { CounterEffects } from './effects/counter.effects';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { reducers } from './reducers';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    EffectsModule.forRoot([CounterEffects])
   ],
   providers: [TodoDataService],
   bootstrap: [AppComponent]
