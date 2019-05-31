@@ -19,5 +19,4 @@ export class TipCalculatorComponent implements OnInit {
   constructor() { }
   ngOnInit() {
   }
-
 }
