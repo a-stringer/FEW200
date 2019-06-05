@@ -1,7 +1,7 @@
 <ul class="list-unstyled">
   <li class="alert alert-info"
     *ngFor="let item of list">
-    <span>item.description</span>
-    <button class="btn btn-danger">X</button>
+    <span>{{ item.description }}</span>
+    <button class="btn btn-danger" (click)="remove(item)">X</button>
   </li>
 </ul>

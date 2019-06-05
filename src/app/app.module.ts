@@ -13,7 +13,7 @@ import { TodoDataService } from './components/todo-list/todo-data.service';
 import { CounterComponent } from './components/counter/counter.component';
 
 import { StoreModule } from '@ngrx/store';
-import { StoreDevtools, StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { reducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';

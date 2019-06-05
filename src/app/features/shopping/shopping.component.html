@@ -5,5 +5,5 @@
   <app-entry></app-entry>
 </div>
 <div class="row">
-  <app-list [list]="stuff$"></app-list>
+  <app-list [list]="stuff$ | async"></app-list>
 </div>

@@ -22,4 +22,3 @@ export const { selectAll: selectAllShoppingItems } = fromList.adapter.getSelecto
 // The selectors for the actual components
 export const selectShoppingListItems =
   createSelector(selectAllShoppingItems, items => items as ShoppingListItem[]);
-

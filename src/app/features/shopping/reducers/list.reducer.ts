@@ -1,11 +1,12 @@
-import { Action } from '@ngrx/store';
+import * as listActions from '../actions/list.actions';
 import { EntityState, createEntityAdapter } from '@ngrx/entity';
-
-interface ShoppingItemEntity {
+export interface ShoppingItemEntity {
   id: string;
   description: string;
 }
+
 export interface State extends EntityState<ShoppingItemEntity> {
+
 }
 export const adapter = createEntityAdapter<ShoppingItemEntity>();
 
@@ -23,8 +24,14 @@ const initialState: State = {
   }
 };
 
-export function reducer(state: State = initialState, action: Action): State {
+export function reducer(state: State = initialState, action: listActions.All): State {
   switch (action.type) {
+    case listActions.REMOVED_ITEM: {
+      return adapter.removeOne(action.payload.id, state);
+    }
+    case listActions.ADD_ITEM: {
+      return adapter.addOne(action.payload, state);
+    }
     default: {
       return state;
     }
