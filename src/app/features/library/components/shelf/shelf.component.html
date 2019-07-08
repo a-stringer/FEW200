@@ -1,0 +1,6 @@
+<ul class="library__shelf library__shelf--owned">
+  <li *ngFor="let book of shelf" class="library__book book" draggable="true" [style.background-color]="book.color">
+    <p class="book__text book__text--title">{{book.bookTitle}}</p>
+    <p class="book__text book__text--author">{{book.authorLast}}</p>
+  </li>
+</ul>

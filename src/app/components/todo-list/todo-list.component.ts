@@ -36,7 +36,7 @@ export class TodoListComponent implements OnInit, OnDestroy {
 
   add(what: string) {
     // this.items.unshift({ description: what, completed: false });
-    // TODO: A Call tot he service to add this new Todo.
+    // TODO: A Call to the service to add this new Todo.
     this.brad.add(what);
   }
 

@@ -1,0 +1,45 @@
+$darkened: rgb(35,15,1);
+$gold-highlight: rgb(255,245,160);
+.library__shelf {
+  display: inline-flex;
+  width: 50%;
+  align-items: flex-start;
+}
+.book {
+  background: burlywood;
+  background-image: linear-gradient(to right, rgba($darkened,0.5) 0%, rgba($darkened,0) 40%, rgba($darkened,0) 60%, rgba($darkened,0.5) 100%);
+  display: flex;
+  height: 60rem;
+  width: 10rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.4rem solid $darkened;
+  border-radius: 0.4rem;
+  padding: 5rem 0;
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.4rem;
+    background-color: gold;
+    background-image: linear-gradient(to right, rgba($darkened,0.5) 0%, rgba($darkened,0) 40%, rgba($gold-highlight,0.6) 45%, rgba($gold-highlight,0.6) 55%, rgba($darkened,0) 60%, rgba($darkened,0.5) 100%);
+  }
+  &:before {top: 2rem}
+  &:after {bottom: 2rem}
+
+  &__text {
+    font-size: 1.8rem;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    writing-mode: vertical-rl;
+    background-color: rgba(black, 0.9);
+    color: gold;
+    padding: 1rem;
+  }
+}

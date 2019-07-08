@@ -9,7 +9,6 @@ export class ItemRemoved implements Action {
   constructor(public payload: ShoppingItemEntity) { }
 }
 
-
 export const ADD_ITEM = '[shopping] add item';
 export class ItemAdded implements Action {
   readonly type = ADD_ITEM;
@@ -21,7 +20,6 @@ export class ItemAdded implements Action {
     };
   }
 }
-
 
 export type All =
   ItemAdded

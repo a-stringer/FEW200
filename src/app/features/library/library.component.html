@@ -1,40 +1,5 @@
 <section class="library">
-  <form class="library__new-book">
-    <label>
-      Book Title
-      <input type="text" name="title" id="">
-    </label>
-    <label>
-      Author's Last Name
-      <input type="text" name="authorLast" id="">
-    </label>
-    <label>
-      Author's First Name
-      <input type="text" name="authorFirst" id="">
-    </label>
-    <label>
-      Book Format
-      <select name="format" id="">
-        <option value="eBook">eBook</option>
-        <option value="paperback">Paperback</option>
-        <option value="hardback">Hardback</option>
-      </select>
-    </label>
-    <label>
-      Add Book to library
-      <input type="button" value="add">
-    </label>
-  </form>
-  <ul class="library__shelf library__shelf--owned">
-    <li class="library__book book">
-      <p class="book__author">Stephenson</p>
-      <p class="book__title">Anathem</p>
-    </li>
-  </ul>
-  <ul class="library__shelf library__shelf--loaned">
-    <li class="library__book book">
-      <p class="book__author">Stephenson</p>
-      <p class="book__title">Anathem</p>
-    </li>
-  </ul>
+  <h3>Add Book to library</h3>
+  <app-book-detail></app-book-detail>
+  <app-shelf [shelf]="books$ | async"></app-shelf>
 </section>

@@ -1,0 +1,23 @@
+<form class="library__new-book">
+  <label>
+    Book Title
+    <input type="text" name="title" id="" #title>
+  </label>
+  <label>
+    Author's Last Name
+    <input type="text" name="authorLast" id="" #last>
+  </label>
+  <label>
+    Author's First Name
+    <input type="text" name="authorFirst" id="" #first>
+  </label>
+  <label>
+    Book Format
+    <select name="format" id="" #format>
+      <option value="eBook">eBook</option>
+      <option value="paperback">Paperback</option>
+      <option value="hardback">Hardback</option>
+    </select>
+  </label>
+  <button type="button" value="add" (click)="addBook(title,last,first,format)">+</button>
+</form>
